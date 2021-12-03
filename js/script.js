@@ -13,18 +13,17 @@ let prezzoFinaleBiglietto;
 
 if (age < 18) {
     prezzoFinaleBiglietto = prezzoBiglietto - scontoMinorenne;
+    prezzoFinaleBiglietto = prezzoFinaleBiglietto.toFixed(2);
     biglietto.innerHTML = `Il costo del biglietto se sei minorenne è di ${prezzoFinaleBiglietto}€`;
-    Math.round(prezzoFinaleBiglietto * 100) / 100;
 
 } else if (age > 65) {
     prezzoFinaleBiglietto = prezzoBiglietto - scontoOver;
+    prezzoFinaleBiglietto = prezzoFinaleBiglietto.toFixed(2);
     biglietto.innerHTML = `Il costo del biglietto se sei over 65 è di ${prezzoFinaleBiglietto}€`;
-    Math.round(prezzoFinaleBiglietto * 100) / 100;
 
 } else {
     prezzoFinaleBiglietto = prezzoBiglietto
+    prezzoFinaleBiglietto = prezzoFinaleBiglietto.toFixed(2);
     biglietto.innerHTML = `Il costo del tuo biglietto è di ${prezzoFinaleBiglietto}€`;
-    Math.round(prezzoFinaleBiglietto * 100) / 100;
-
 }
 
